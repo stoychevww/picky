@@ -7,12 +7,12 @@ export default function Home() {
         <div>
           Hi. I&apos;m{" "}
           <a
-            href="https://twitter.com/t3dotgg"
+            href="https://instagram.com/stoychevww"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            Theo
+            Georgi
           </a>
           . I built these tools because I was annoyed they did not exist.
         </div>

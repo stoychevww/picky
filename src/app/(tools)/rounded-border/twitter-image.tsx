@@ -2,7 +2,7 @@ import { GenerateImage } from "@/app/utils/og-generator";
 
 export const runtime = "edge";
 
-export const alt = "Corner Rounder - QuickPic";
+export const alt = "Corner Rounder - Picky";
 export const contentType = "image/png";
 
 export const size = {

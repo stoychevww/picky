@@ -2,7 +2,7 @@ import { GenerateImage } from "@/app/utils/og-generator";
 
 export const runtime = "edge";
 
-export const alt = "Square Image Generator - QuickPic";
+export const alt = "Square Image Generator - Picky";
 export const contentType = "image/png";
 
 export const size = {

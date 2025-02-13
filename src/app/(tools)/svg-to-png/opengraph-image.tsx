@@ -2,7 +2,7 @@ import { GenerateImage } from "@/app/utils/og-generator";
 
 export const runtime = "edge";
 
-export const alt = "SVG ➡️ PNG - QuickPic";
+export const alt = "SVG ➡️ PNG - Picky";
 export const contentType = "image/png";
 
 export const size = {

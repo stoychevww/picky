@@ -1,7 +1,7 @@
 import { RoundedTool } from "./rounded-tool";
 
 export const metadata = {
-  title: "Corner Rounder - QuickPic",
+  title: "Corner Rounder - Picky",
   description: "Round corners on an image (for free because duh)",
 };
 
