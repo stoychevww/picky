@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface UploadBoxProps {
   title: string;
@@ -16,33 +17,51 @@ export function UploadBox({
   onChange,
 }: UploadBoxProps) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 p-4">
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-center text-white">{title}</p>
+    <div className="flex flex-col items-center justify-center gap-6 p-6">
+      <div className="flex flex-col items-center gap-3 text-center">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          {title}
+        </h2>
         {subtitle && (
-          <p className="inline-block rounded-full border border-white/30 bg-white/5 px-2 py-0.5 text-center text-sm text-white/60">
+          <p className="inline-block rounded-xl bg-white/5 px-4 py-1.5 text-sm text-white/70 ring-1 ring-white/10">
             {subtitle}
           </p>
         )}
       </div>
-      <div className="flex w-72 flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-white/30 bg-white/10 p-6 backdrop-blur-sm">
-        <svg
-          className="h-8 w-8 text-gray-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-          />
-        </svg>
-        <p className="text-sm text-gray-400">Drag and Drop</p>
-        <p className="text-sm text-gray-500">or</p>
-        <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white shadow-md transition-colors duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-          <span>{description}</span>
+
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="group flex w-full max-w-lg flex-col items-center justify-center gap-4 rounded-xl bg-white/5 p-8 ring-1 ring-white/10 transition-all duration-300 hover:bg-white/[0.07] hover:ring-white/20"
+      >
+        <div className="rounded-full bg-white/5 p-4 ring-1 ring-white/10 group-hover:bg-white/10">
+          <svg
+            className="h-8 w-8 text-white/70"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+            />
+          </svg>
+        </div>
+
+        <div className="flex flex-col items-center gap-2 text-center">
+          <p className="text-sm font-medium text-white/70">Drag and Drop</p>
+          <p className="text-sm text-white/50">or</p>
+        </div>
+
+        <label className="group/button relative cursor-pointer overflow-hidden rounded-xl bg-white/5 px-6 py-2.5 ring-1 ring-white/10 transition-all duration-300 hover:bg-white/10 hover:ring-white/20">
+          <motion.span
+            className="inline-block text-sm font-medium text-white"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            {description}
+          </motion.span>
           <input
             type="file"
             onChange={onChange}
@@ -50,7 +69,7 @@ export function UploadBox({
             className="hidden"
           />
         </label>
-      </div>
+      </motion.div>
     </div>
   );
 }

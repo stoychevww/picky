@@ -54,9 +54,7 @@ function useSvgConverter(props: {
         const svgFileName = props.imageMetadata.name ?? "svg_converted";
 
         // Remove the .svg extension
-        link.download = `${svgFileName.replace(".svg", "")}-${
-          props.scale
-        }x.png`;
+        link.download = `${svgFileName.replace(".svg", "")}-${props.scale}x.png`;
         link.click();
       }
     };
@@ -68,9 +66,7 @@ function useSvgConverter(props: {
       saveImage();
     };
 
-    img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
-      scaledSvg
-    )}`;
+    img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(scaledSvg)}`;
   };
 
   return {
@@ -148,7 +144,7 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
   const [scale, setScale] = useLocalStorage<Scale>("svgTool_scale", 1);
   const [customScale, setCustomScale] = useLocalStorage<number>(
     "svgTool_customScale",
-    1
+    1,
   );
 
   // Get the actual numeric scale value
