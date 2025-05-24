@@ -1,0 +1,42 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Next.js build output
+.next
+out
+
+# Testing
+coverage
+*.test.*
+
+# Development
+.git
+.gitignore
+.env.local
+.env.*.local
+README.md
+*.log
+
+# IDE and Editor files
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Cache directories
+.eslintcache
+.prettier*
+*.tsbuildinfo 
